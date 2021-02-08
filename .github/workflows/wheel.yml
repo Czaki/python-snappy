@@ -77,7 +77,6 @@ jobs:
       CIBW_BEFORE_ALL: "bash {project}/build_snappy.sh"
       CIBW_SKIP: ${{ matrix.skip }}
       CIBW_ENVIRONMENT_WINDOWS: ${{ matrix.environment_windows }}
-      CIBW_ENVIRONMENT_MACOS: "$CPLUS_INCLUDE_PATH=/usr/local/include/ LIBRARY_PATH=/usr/local/lib/"
       CIBW_ARCHS_LINUX: ${{ matrix.linux_archs }}
       CIBW_ARCHS_MACOS: x86_64 universal2
       CIBW_TEST_SKIP: "*_arm64 *_universal2:arm64"
